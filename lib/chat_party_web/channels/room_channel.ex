@@ -1,12 +1,12 @@
 defmodule ChatPartyWeb.RoomChannel do
   use Phoenix.Channel
 
-  alias Faker.Name.PtBr, as: Faker
+  alias Faker.StarWars
 
   def join("room:" <> room_name, params, socket) do
     username =
       case Map.get(params, "username") do
-        "" -> Faker.first_name()
+        "" -> StarWars.character()
         username -> username
       end
 
