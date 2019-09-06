@@ -1,5 +1,9 @@
 <form action="/room">
   <label for="room-name">Nome da Sala</label>
-  <input id="room-name" name="name" type="text">
+  <input id="room-name" name="name" type="text" required>
+  
+  <label for="room-name">Apelido</label>
+  <input id="username" name="username" type="text">
+
   <input type="submit" value="Entrar">
 </form>

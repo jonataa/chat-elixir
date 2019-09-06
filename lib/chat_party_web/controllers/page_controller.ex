@@ -5,7 +5,7 @@ defmodule ChatPartyWeb.PageController do
     render(conn, "index.html")
   end
 
-  def room(conn, %{"name" => room_name}) do
-    render(conn, "room.html", %{room_name: room_name})
+  def room(conn, %{"name" => room_name} = params) do
+    render(conn, "room.html", %{room_name: room_name, username: Map.get(params, "username")})
   end
 end
