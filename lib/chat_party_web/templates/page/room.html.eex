@@ -1,0 +1,3 @@
+<div id="chat-messages"></div>
+<input id="chat-input" type="text">
+<input id="room-name" type="hidden" value="<%= @room_name %>">
